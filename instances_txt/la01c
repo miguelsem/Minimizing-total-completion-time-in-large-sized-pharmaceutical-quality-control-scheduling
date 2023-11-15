@@ -1,0 +1,8 @@
+#+++++++++++++++++++++++++++++
+# instance la01
+#+++++++++++++++++++++++++++++
+# Lawrence 10x5 instance (Table 3, instance 1); also called (setf1) or (F1)
+3 2
+0 20 1 30
+1 30 0 20
+0 20

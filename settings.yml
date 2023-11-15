@@ -1,0 +1,93 @@
+paths:
+  instances:
+    C:\src\drc-sched-3\instances
+  experiments:
+    C:\src\drc-sched-3\experiments
+  results:
+    C:\src\drc-sched-3\experiments\results
+params_milp:
+  time_limit: 3600
+  dual_resource: True
+  log: True
+  objective: total_completion_time
+experiments:
+  n_jobs:
+    - 5
+    - 10
+    - 70
+  n_sample_types:
+    - 3
+  n_workers:
+    - 2
+    - 3
+    - 7
+  n_machines:
+    - 7
+  flexibility:
+    - 0.3
+    - 0.6
+  replications:
+    - 0
+    - 1
+    - 2
+parameters:
+  print_plot:
+    False
+  number_of_repetitions:
+    1
+  tabu_search:
+    max_steps:
+      200
+    ls_steps:
+      50
+    tabu_list_size:
+      20
+    stop_early:
+      0
+heuristic_settings:
+  print_plot:
+    True
+  M-LQ:
+    test_sorting:
+      - 'M-LQ'
+      - 'M-LAST'
+      - 'LPT'
+    equipment_sorting:
+      - 'LQ'
+      - 'LAST'
+    user_sorting:
+      - 'LAFT'
+      - 'LAST'
+  LPT:
+    test_sorting:
+      - 'LPT'
+      - 'M-LAST'
+      - 'M-LQ'
+    equipment_sorting:
+      - 'LAST'
+      - 'LQ'
+    user_sorting:
+      - "LAFT"
+      - 'LAST'
+  SPT':
+    test_sorting:
+      - 'SPT'
+      - 'M-LAST'
+      - 'M-LQ'
+    equipment_sorting:
+      - 'LAST'
+      - 'LQ'
+    user_sorting:
+      - 'LAFT'
+      - 'LAST'
+  M-LAST:
+    test_sorting:
+      - 'M-LAST'
+      - 'SPT'
+      - 'M-LQ'
+    equipment_sorting:
+      - 'LAST'
+      - 'LQ'
+    user_sorting:
+      - 'LAFT'
+      - 'LAST'
